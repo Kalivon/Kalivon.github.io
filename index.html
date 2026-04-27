@@ -6,7 +6,7 @@
 <title>Kalivon — Websites That Convert</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
     --blue: #3B82F6;
@@ -24,9 +24,9 @@
     --text: #F9FAFB;
     --sub: #9CA3AF;
     --border: rgba(255,255,255,0.08);
-    --glass: rgba(255,255,255,0.04);
-    --glass-hover: rgba(255,255,255,0.07);
-    --card-border: rgba(255,255,255,0.1);
+    --glass: rgba(255,255,255,0.08);
+    --glass-hover: rgba(255,255,255,0.13);
+    --card-border: rgba(255,255,255,0.16);
     --nav-glass: rgba(11,15,20,0.7);
   }
 
@@ -37,9 +37,9 @@
     --text: #111827;
     --sub: #6B7280;
     --border: rgba(0,0,0,0.06);
-    --glass: rgba(255,255,255,0.6);
-    --glass-hover: rgba(255,255,255,0.85);
-    --card-border: rgba(0,0,0,0.08);
+    --glass: rgba(255,255,255,0.75);
+    --glass-hover: rgba(255,255,255,0.92);
+    --card-border: rgba(0,0,0,0.10);
     --nav-glass: rgba(255,255,255,0.75);
   }
 
@@ -48,14 +48,14 @@
   html { scroll-behavior: smooth; }
 
   body {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     background: var(--bg);
     color: var(--text);
     overflow-x: hidden;
     transition: background 0.4s, color 0.4s;
   }
 
-  h1,h2,h3,h4 { font-family: 'Syne', sans-serif; }
+  h1,h2,h3,h4 { font-family: 'Inter', sans-serif; }
 
   /* CANVAS */
   #particle-canvas {
@@ -90,7 +90,7 @@
   }
 
   .logo {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1.5rem;
     font-weight: 800;
     letter-spacing: -0.5px;
@@ -128,7 +128,7 @@
     color: #fff;
     padding: 0.55rem 1.3rem;
     border-radius: 50px;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 0.875rem;
     font-weight: 500;
     border: none;
@@ -148,7 +148,7 @@
     color: var(--text);
     padding: 0.55rem 1.3rem;
     border-radius: 50px;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 0.875rem;
     font-weight: 500;
     border: 1px solid var(--card-border);
@@ -197,7 +197,7 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 6rem 0 4rem;
+    padding: 5rem 0 4rem;
   }
 
   .hero-grid {
@@ -243,9 +243,7 @@
     line-height: 1.05;
     letter-spacing: -1.5px;
     margin-bottom: 1.5rem;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeUp 0.8s var(--ease) 0.1s forwards;
+    animation: fadeUp 0.8s var(--ease) 0.1s both;
   }
 
   .hero-h1 em {
@@ -259,9 +257,7 @@
     line-height: 1.7;
     margin-bottom: 2rem;
     font-weight: 300;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeUp 0.8s var(--ease) 0.2s forwards;
+    animation: fadeUp 0.8s var(--ease) 0.2s both;
   }
 
   .hero-ctas {
@@ -270,9 +266,7 @@
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 2.5rem;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeUp 0.8s var(--ease) 0.3s forwards;
+    animation: fadeUp 0.8s var(--ease) 0.3s both;
   }
 
   .hero-ctas .btn-primary {
@@ -291,8 +285,8 @@
     gap: 0.75rem;
     color: var(--sub);
     font-size: 0.82rem;
-    opacity: 0;
-    animation: fadeUp 0.8s var(--ease) 0.4s forwards;
+    opacity: 1;
+    margin-bottom: 1.5rem;
   }
 
   .trust-avatars {
@@ -319,6 +313,7 @@
   .stars { color: #FBBF24; font-size: 0.8rem; letter-spacing: -1px; }
 
   @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
   }
 
@@ -474,7 +469,7 @@
   }
 
   .card-value {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1.3rem;
     font-weight: 700;
     color: var(--blue);
@@ -584,7 +579,6 @@
   .service-card:hover::before { opacity: 1; }
 
   .service-card:hover {
-    transform: translateY(-6px);
     box-shadow: 0 24px 60px rgba(0,0,0,0.3), 0 0 40px var(--blue-dim);
     background: var(--glass-hover);
   }
@@ -671,7 +665,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Syne', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 800;
     font-size: 1.1rem;
     color: var(--blue);
@@ -759,7 +753,7 @@
   }
 
   .pricing-price {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 3.2rem;
     font-weight: 800;
     letter-spacing: -2px;
@@ -813,6 +807,38 @@
   }
 
   .pricing-features li.active { color: var(--text); }
+
+  /* PRICING FOOTER */
+  .pricing-info-card {
+    background: var(--glass);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 1.75rem;
+  }
+  .pricing-info-card h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+  }
+  .pricing-info-card p {
+    color: var(--sub);
+    font-size: 0.875rem;
+    line-height: 1.7;
+  }
+  .payment-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--glass);
+    border: 1px solid var(--card-border);
+    border-radius: 50px;
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+  }
 
   /* PROJECTS */
   #projects { padding: 7rem 0; }
@@ -943,7 +969,7 @@
     border-radius: var(--radius-sm);
     padding: 0.75rem 1rem;
     color: var(--text);
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 0.9rem;
     font-weight: 300;
     outline: none;
@@ -1083,6 +1109,8 @@
   @media (max-width: 1024px) {
     .pricing-grid { grid-template-columns: repeat(2, 1fr); }
     .footer-inner { grid-template-columns: 1fr 1fr; }
+    #hero { padding-top: 8.5rem !important; align-items: flex-start; }
+    .hero-h1 { font-size: 2.8rem; }
   }
 
   @media (max-width: 768px) {
@@ -1097,8 +1125,17 @@
     .footer-inner { grid-template-columns: 1fr 1fr; gap: 2rem; }
     .footer-bottom { flex-direction: column; gap: 1rem; }
     .form-row { grid-template-columns: 1fr; }
-    .hero-h1 { font-size: 2.4rem; }
+    .hero-h1 { font-size: 2.4rem; margin-bottom: 0.85rem; }
+    .hero-sub { margin-bottom: 1.25rem; }
+    .hero-ctas { margin-bottom: 1.5rem; }
+    .pricing-footer { grid-template-columns: 1fr !important; }
+    .pricing-info-card p { font-size: 0.8rem; line-height: 1.55; }
     section { padding: 4rem 0 !important; }
+    #hero { padding-top: 6.5rem !important; align-items: flex-start; }
+    .stats-row { gap: 0.5rem; margin-top: 1.5rem; }
+    .mobile-menu { display: none !important; }
+    .mobile-menu.open { display: flex !important; }
+    .mobile-menu-footer { display: none !important; }
   }
 
   @media (max-width: 480px) {
@@ -1107,9 +1144,9 @@
     .pricing-grid { grid-template-columns: 1fr; }
   }
 
-  /* Mobile menu */
+  /* Mobile menu - hidden everywhere by default */
   .mobile-menu {
-    display: none;
+    display: none !important;
     position: fixed;
     inset: 0;
     background: var(--bg);
@@ -1118,13 +1155,12 @@
     flex-direction: column;
     gap: 1.5rem;
   }
-
-  .mobile-menu.open { display: flex; }
+  .mobile-menu-footer { display: none !important; }
 
   .mobile-menu a {
     text-decoration: none;
     color: var(--text);
-    font-family: 'Syne', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1.8rem;
     font-weight: 700;
     letter-spacing: -0.5px;
@@ -1160,21 +1196,37 @@
   /* NUMBER STATS */
   .stats-row {
     display: flex;
-    gap: 3rem;
-    margin-top: 3rem;
-    padding-top: 2.5rem;
-    border-top: 1px solid var(--border);
+    gap: 0.75rem;
+    margin-top: 2.5rem;
+    opacity: 1 !important;
+    transform: none !important;
   }
 
-  .stat-item { }
+  .stat-card {
+    flex: 1;
+    background: rgba(59,130,246,0.12);
+    border: 1px solid rgba(59,130,246,0.35);
+    border-top: 3px solid var(--blue);
+    border-radius: 14px;
+    padding: 1.1rem 0.75rem;
+    text-align: center;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  [data-theme="light"] .stat-card {
+    background: rgba(59,130,246,0.08);
+    border-color: rgba(59,130,246,0.2);
+  }
+
   .stat-num {
-    font-family: 'Syne', sans-serif;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 800;
     letter-spacing: -1px;
     color: var(--blue);
+    line-height: 1;
   }
-  .stat-label { font-size: 0.8rem; color: var(--sub); font-weight: 300; }
+  .stat-label { font-size: 0.72rem; color: var(--sub); margin-top: 0.3rem; line-height: 1.3; }
 
 </style>
 </head>
@@ -1195,7 +1247,7 @@
     </ul>
     <div class="nav-right">
       <button class="theme-toggle" id="themeToggle" title="Toggle theme">🌙</button>
-      <a href="#contact" class="btn-primary">Get Started</a>
+      <a href="#contact" class="btn-primary nav-cta">Get Started</a>
       <div class="hamburger" id="hamburger">
         <span></span><span></span><span></span>
       </div>
@@ -1220,7 +1272,7 @@
       <div class="hero-left">
         <div class="hero-badge">Available for new projects</div>
         <h1 class="hero-h1">Websites That Turn <em>Visitors</em> Into Customers</h1>
-        <p class="hero-sub">I build high-converting, performance-optimized websites that make your business stand out — and make your visitors stay, engage, and buy.</p>
+        <p class="hero-sub">I build clean, professional websites for local businesses — fast, affordable, and built to get you more customers. No tech headaches, just a site that works.</p>
         <div class="hero-ctas">
           <a href="#contact" class="btn-primary">Get Your Website</a>
           <a href="#projects" class="btn-outline">View My Work</a>
@@ -1231,92 +1283,120 @@
           </div>
           <div>
             <div class="stars">★★★★★</div>
-            <div>Trusted by 50+ businesses</div>
+            <div>Trusted by 50+ local businesses</div>
           </div>
         </div>
         <div class="stats-row">
-          <div class="stat-item">
+          <div class="stat-card">
             <div class="stat-num">50+</div>
             <div class="stat-label">Sites Launched</div>
           </div>
-          <div class="stat-item">
+          <div class="stat-card">
             <div class="stat-num">98%</div>
             <div class="stat-label">Client Satisfaction</div>
           </div>
-          <div class="stat-item">
+          <div class="stat-card">
             <div class="stat-num">3×</div>
-            <div class="stat-label">Avg Conversion Lift</div>
+            <div class="stat-label">Avg Conversion</div>
           </div>
         </div>
       </div>
 
       <div class="hero-visual">
+        <!-- Main browser mockup showing a local business site -->
         <div class="mock-browser">
           <div class="mock-bar">
             <div class="mock-dots"><i></i><i></i><i></i></div>
-            <div class="mock-url">kalivon.dev/client-site</div>
+            <div class="mock-url">smithsplumbing.com</div>
           </div>
           <div class="mock-body">
-            <div class="mock-hero-content">
-              <div class="mock-title-bar"></div>
-              <div class="mock-line short"></div>
-              <div class="mock-line shorter"></div>
-              <div class="mock-btn-preview"></div>
+            <!-- Fake nav -->
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;padding-bottom:0.6rem;border-bottom:1px solid var(--border)">
+              <div style="width:50px;height:8px;background:var(--blue);border-radius:4px;opacity:0.9"></div>
+              <div style="display:flex;gap:8px">
+                <div style="width:28px;height:6px;background:var(--border);border-radius:3px"></div>
+                <div style="width:28px;height:6px;background:var(--border);border-radius:3px"></div>
+                <div style="width:28px;height:6px;background:var(--border);border-radius:3px"></div>
+                <div style="width:36px;height:16px;background:var(--blue);border-radius:8px;opacity:0.85"></div>
+              </div>
             </div>
+            <!-- Hero area -->
+            <div class="mock-hero-content">
+              <div style="font-size:0.55rem;color:var(--blue);font-weight:700;margin-bottom:4px;letter-spacing:0.05em">LOCAL PLUMBING · HAYMARKET VA</div>
+              <div class="mock-title-bar" style="width:80%"></div>
+              <div class="mock-title-bar" style="width:55%;height:7px;opacity:0.4;margin-top:3px"></div>
+              <div style="display:flex;gap:6px;margin-top:10px">
+                <div class="mock-btn-preview" style="width:60px;height:18px"></div>
+                <div class="mock-btn-preview" style="width:60px;height:18px;background:transparent;border:1px solid var(--blue);opacity:0.5"></div>
+              </div>
+            </div>
+            <!-- Service cards -->
             <div class="mock-cards-row">
               <div class="mock-card-mini">
-                <div class="icon"></div>
-                <div class="bar"></div>
-                <div class="bar" style="width:70%"></div>
+                <div style="font-size:0.9rem;margin-bottom:4px">🔧</div>
+                <div class="bar" style="width:90%"></div>
+                <div class="bar" style="width:65%"></div>
               </div>
               <div class="mock-card-mini">
-                <div class="icon"></div>
-                <div class="bar"></div>
+                <div style="font-size:0.9rem;margin-bottom:4px">🚿</div>
+                <div class="bar" style="width:80%"></div>
                 <div class="bar" style="width:50%"></div>
               </div>
               <div class="mock-card-mini">
-                <div class="icon"></div>
-                <div class="bar"></div>
-                <div class="bar" style="width:80%"></div>
+                <div style="font-size:0.9rem;margin-bottom:4px">⚡</div>
+                <div class="bar" style="width:85%"></div>
+                <div class="bar" style="width:70%"></div>
               </div>
             </div>
           </div>
         </div>
 
+        <!-- Float card: new lead notification -->
+        <div class="float-card analytics">
+          <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem">
+            <div style="width:8px;height:8px;border-radius:50%;background:#10B981;flex-shrink:0;animation:pulse 2s infinite"></div>
+            <div class="card-label" style="margin:0">New Lead</div>
+          </div>
+          <div style="font-size:0.82rem;font-weight:600;margin-bottom:2px">James R. — Pipe Repair</div>
+          <div style="font-size:0.72rem;color:var(--sub)">via your contact form · just now</div>
+          <div style="margin-top:0.6rem;height:1px;background:var(--border)"></div>
+          <div style="display:flex;justify-content:space-between;margin-top:0.6rem">
+            <span style="font-size:0.7rem;color:var(--sub)">This month</span>
+            <span style="font-size:0.7rem;color:#10B981;font-weight:600">+14 leads</span>
+          </div>
+        </div>
+
+        <!-- Float card: Google Maps / local presence -->
         <div class="float-card mobile">
-          <div class="card-label">Mobile</div>
-          <div class="mobile-screen">
-            <div class="mobile-header"></div>
-            <div class="mobile-content">
-              <div class="bar" style="height:6px;background:var(--border);border-radius:3px;margin-bottom:5px"></div>
-              <div class="bar" style="height:6px;background:var(--border);border-radius:3px;width:70%;margin-bottom:5px"></div>
-              <div class="bar" style="height:18px;background:var(--blue-dim);border-radius:5px;margin-top:8px"></div>
+          <div class="card-label">Local Search</div>
+          <div style="margin-top:0.4rem;background:var(--bg2);border-radius:8px;overflow:hidden;border:1px solid var(--border)">
+            <!-- Fake map -->
+            <div style="height:55px;background:linear-gradient(135deg,#1a2a1a,#0d1a0d);position:relative;display:flex;align-items:center;justify-content:center">
+              <div style="width:10px;height:10px;background:var(--blue);border-radius:50%;box-shadow:0 0 8px var(--blue-glow)"></div>
+              <div style="position:absolute;bottom:4px;right:4px;font-size:0.55rem;color:var(--sub)">Haymarket, VA</div>
+            </div>
+            <div style="padding:0.4rem 0.5rem">
+              <div style="height:5px;background:var(--border);border-radius:3px;width:80%;margin-bottom:3px"></div>
+              <div style="height:4px;background:var(--border);border-radius:3px;width:55%"></div>
             </div>
           </div>
-        </div>
-
-        <div class="float-card analytics">
-          <div class="card-label">Conversions</div>
-          <div class="card-value">+312%</div>
-          <div class="analytics-bars">
-            <div class="analytics-bar" style="height:30%"></div>
-            <div class="analytics-bar" style="height:55%"></div>
-            <div class="analytics-bar" style="height:40%"></div>
-            <div class="analytics-bar" style="height:70%"></div>
-            <div class="analytics-bar" style="height:60%"></div>
-            <div class="analytics-bar" style="height:90%"></div>
-            <div class="analytics-bar" style="height:80%"></div>
+          <div style="margin-top:0.5rem;display:flex;align-items:center;gap:4px">
+            <span style="font-size:0.65rem;color:#FBBF24">★★★★★</span>
+            <span style="font-size:0.65rem;color:var(--sub)">48 reviews</span>
           </div>
         </div>
 
-        <div class="float-card code">
-          <div class="code-snippet">
-            <div><span class="kw">const</span> site = <span class="kw">await</span></div>
-            <div>&nbsp;&nbsp;kalivon.<span class="str">build</span>({</div>
-            <div>&nbsp;&nbsp;&nbsp;&nbsp;speed: <span class="kw">100</span>,</div>
-            <div>&nbsp;&nbsp;&nbsp;&nbsp;convert: <span class="str">true</span></div>
-            <div>&nbsp;&nbsp;});</div>
+        <!-- Float card: speed score -->
+        <div class="float-card code" style="padding:0.9rem 1.1rem">
+          <div class="card-label">PageSpeed Score</div>
+          <div style="display:flex;align-items:flex-end;gap:0.5rem;margin-top:0.4rem">
+            <div style="font-size:1.6rem;font-weight:800;color:#10B981;line-height:1">98</div>
+            <div style="font-size:0.7rem;color:var(--sub);margin-bottom:3px">/ 100</div>
           </div>
+          <div style="margin-top:0.5rem;height:5px;background:var(--border);border-radius:10px;overflow:hidden">
+            <div style="width:98%;height:100%;background:linear-gradient(90deg,#10B981,#3B82F6);border-radius:10px"></div>
+          </div>
+          <div style="font-size:0.65rem;color:var(--sub);margin-top:4px">Fast load · Mobile optimized</div>
         </div>
       </div>
     </div>
@@ -1328,33 +1408,33 @@
   <div class="container">
     <div class="section-header reveal">
       <div class="section-tag">What I Do</div>
-      <h2 class="section-title">Services Built to<br><span class="gradient-text">Drive Real Results</span></h2>
-      <p class="section-sub">Every service is crafted with conversion psychology, performance optimization, and your business goals as the north star.</p>
+      <h2 class="section-title">What I Build for<br><span class="gradient-text">Your Business</span></h2>
+      <p class="section-sub">All frontend — clean, fast, and good-looking websites that work great on any device.</p>
     </div>
     <div class="services-grid">
       <div class="service-card tilt-card reveal reveal-delay-1">
         <div class="service-icon">🌐</div>
         <h3>Business Websites</h3>
-        <p>Full-scale business sites with clear messaging, compelling copy, and conversion-focused design that brings in leads on autopilot.</p>
+        <p>A clean website for your business that tells people who you are, what you do, and how to reach you. Simple, professional, and ready to go.</p>
         <span class="service-tag">Most Popular</span>
       </div>
       <div class="service-card tilt-card reveal reveal-delay-2">
         <div class="service-icon">🚀</div>
         <h3>Landing Pages</h3>
-        <p>Laser-focused landing pages with A/B-tested layouts, persuasive copy, and optimized CTAs to maximize your ad spend.</p>
+        <p>One focused page built to get people to take action — call you, fill out a form, or buy something. Great for ads and promotions.</p>
         <span class="service-tag">High ROI</span>
       </div>
       <div class="service-card tilt-card reveal reveal-delay-3">
-        <div class="service-icon">📅</div>
-        <h3>Booking Systems</h3>
-        <p>Seamless online booking integrations that fill your calendar automatically — no back-and-forth, no friction, no missed clients.</p>
-        <span class="service-tag">Automation</span>
+        <div class="service-icon">🖼️</div>
+        <h3>Portfolio & Gallery Sites</h3>
+        <p>Show off your work in a way that looks great. Perfect for photographers, artists, stylists, or anyone who wants to display what they do.</p>
+        <span class="service-tag">Visual</span>
       </div>
       <div class="service-card tilt-card reveal reveal-delay-4">
-        <div class="service-icon">⚡</div>
-        <h3>Performance Optimization</h3>
-        <p>Speed audits, Core Web Vitals fixes, and technical SEO that push your existing site to the top of search results.</p>
-        <span class="service-tag">100 PageSpeed</span>
+        <div class="service-icon">📱</div>
+        <h3>Mobile-First Design</h3>
+        <p>Every site I build looks great on phones, tablets, and desktops. Most of your visitors are on mobile — your site needs to work perfectly there.</p>
+        <span class="service-tag">All Devices</span>
       </div>
     </div>
   </div>
@@ -1365,30 +1445,30 @@
   <div class="container">
     <div class="section-header reveal" style="text-align:center">
       <div class="section-tag">How It Works</div>
-      <h2 class="section-title">A Proven Process for<br><span class="gradient-text">Flawless Delivery</span></h2>
-      <p class="section-sub" style="margin:0 auto">From idea to live in hours — sometimes same-day. Every step is transparent and collaborative.</p>
+      <h2 class="section-title">Simple Process,<br><span class="gradient-text">Fast Results</span></h2>
+      <p class="section-sub" style="margin:0 auto">No complicated back-and-forth. We talk, I build, you get a site — sometimes the same day.</p>
     </div>
     <div class="process-timeline">
       <div class="timeline-line"></div>
       <div class="timeline-step">
         <div class="step-dot">01</div>
         <div class="step-content">
-          <h3>Discovery</h3>
-          <p>We start with a deep-dive call to understand your business, goals, audience, and competition. I document everything so the build is perfectly aligned from day one.</p>
+          <h3>We Talk</h3>
+          <p>Tell me what your business does and what you need on your site. Quick and easy — no long forms or confusing questions.</p>
         </div>
       </div>
       <div class="timeline-step">
         <div class="step-dot">02</div>
         <div class="step-content">
-          <h3>Design</h3>
-          <p>I craft custom wireframes and high-fidelity mockups tailored to your brand. You get to review and approve before a single line of code is written.</p>
+          <h3>I Design It</h3>
+          <p>I put together a layout that matches your brand and looks great. You can share any ideas, colors, or examples you like — or just let me handle it.</p>
         </div>
       </div>
       <div class="timeline-step">
         <div class="step-dot">03</div>
         <div class="step-content">
-          <h3>Development</h3>
-          <p>Clean, fast, and maintainable code built with the latest technologies. Mobile-first, SEO-optimized, and performance-tested at every stage.</p>
+          <h3>I Build It</h3>
+          <p>I code the site — clean, fast, and mobile-friendly. You get to see it as it comes together and can ask for changes along the way.</p>
         </div>
       </div>
       <div class="timeline-step">
@@ -1411,49 +1491,82 @@
       <p class="section-sub" style="margin:0 auto">No hidden fees, no surprises. Pick the plan that fits your vision.</p>
     </div>
     <div class="pricing-grid">
-      <div class="pricing-card reveal reveal-delay-1">
-        <div class="pricing-name">Basic</div>
+      <div class="pricing-card tilt-card reveal reveal-delay-1">
+        <div class="pricing-name">💻 Basic</div>
         <div class="pricing-price"><sup>$</sup>50</div>
-        <div class="pricing-desc">Perfect for startups and solopreneurs getting started online.</div>
+        <div class="pricing-desc">Perfect for getting your business online quickly and professionally.</div>
         <ul class="pricing-features">
           <li class="active">1-page website</li>
-          <li class="active">Mobile responsive</li>
-          <li class="active">Contact form</li>
-          <li class="active">Basic SEO setup</li>
-          <li>CMS integration</li>
-          <li>Analytics dashboard</li>
+          <li class="active">Mobile-friendly design</li>
+          <li class="active">Clean, simple layout</li>
+          <li class="active">Business information section</li>
+          <li class="active">Fast turnaround</li>
+          <li class="active">Free hosted website link</li>
         </ul>
-        <a href="#contact" class="btn-outline" style="width:100%;text-align:center;display:block">Get Basic</a>
+        <a href="#contact" class="btn-outline" style="width:100%;text-align:center;display:block">Get Started</a>
       </div>
-      <div class="pricing-card featured reveal reveal-delay-2">
-        <div class="pricing-name">Standard</div>
+      <div class="pricing-card tilt-card featured reveal reveal-delay-2">
+        <div class="pricing-name">⭐ Standard</div>
         <div class="pricing-price"><sup>$</sup>100</div>
-        <div class="pricing-desc">The most popular choice for growing businesses ready to scale.</div>
+        <div class="pricing-desc">Everything you need to attract and convert customers.</div>
         <ul class="pricing-features">
-          <li class="active">Up to 5 pages</li>
-          <li class="active">Mobile responsive</li>
-          <li class="active">Contact + booking form</li>
-          <li class="active">Full SEO optimization</li>
-          <li class="active">CMS integration</li>
-          <li class="active">Analytics dashboard</li>
+          <li class="active">Everything in Basic</li>
+          <li class="active">Custom-designed layout</li>
+          <li class="active">Contact form</li>
+          <li class="active">Image gallery</li>
+          <li class="active">Google Maps integration</li>
+          <li class="active">Basic SEO setup</li>
         </ul>
-        <a href="#contact" class="btn-primary" style="width:100%;text-align:center;display:block">Get Standard</a>
+        <a href="#contact" class="btn-primary" style="width:100%;text-align:center;display:block">Get Started</a>
       </div>
-      <div class="pricing-card reveal reveal-delay-3">
+      <div class="pricing-card tilt-card reveal reveal-delay-3">
         <div class="pricing-name">Premium</div>
         <div class="pricing-price"><sup>$</sup>150</div>
-        <div class="pricing-desc">Full-scale solution for businesses that want the very best online presence.</div>
+        <div class="pricing-desc">Built to help your business stand out and drive more results.</div>
         <ul class="pricing-features">
-          <li class="active">Unlimited pages</li>
-          <li class="active">Mobile responsive</li>
-          <li class="active">Advanced booking system</li>
-          <li class="active">Advanced SEO + blog</li>
-          <li class="active">CMS + e-commerce</li>
-          <li class="active">Priority support (6mo)</li>
+          <li class="active">Everything in Standard</li>
+          <li class="active">Extra sections (services, reviews, etc.)</li>
+          <li class="active">Smooth animations</li>
+          <li class="active">Performance optimization</li>
+          <li class="active">Priority support & faster turnaround</li>
+          <li class="active">Full setup & launch support</li>
+          <li class="active">Custom domain setup support</li>
         </ul>
-        <a href="#contact" class="btn-outline" style="width:100%;text-align:center;display:block">Get Premium</a>
+        <a href="#contact" class="btn-outline" style="width:100%;text-align:center;display:block">Get Started</a>
       </div>
     </div>
+
+    <!-- HOSTING + WHY CHOOSE US -->
+    <div class="pricing-footer reveal" style="margin-top:3rem;display:grid;grid-template-columns:1fr 1fr;gap:1.5rem">
+      <div class="pricing-info-card">
+        <div style="font-size:1.3rem;margin-bottom:0.75rem">🌐</div>
+        <h4>Website &amp; Hosting</h4>
+        <p>Every plan includes a free hosted link — your site is live and ready to share. Custom domains supported with Premium (domain & hosting bought separately by you).</p>
+      </div>
+      <div class="pricing-info-card">
+        <div style="font-size:1.3rem;margin-bottom:0.75rem">✔</div>
+        <h4>Why Choose Me</h4>
+        <p>One-time payment. No monthly fees. Fast turnaround. Clean design. Simple process — no tech confusion needed on your end.</p>
+        <p style="margin-top:0.75rem;color:var(--blue);font-weight:500;font-size:0.875rem">Ongoing edits &amp; updates — $20/month</p>
+      </div>
+    </div>
+
+    <!-- PAYMENT METHODS -->
+    <div class="reveal" style="margin-top:1.5rem;background:var(--glass);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--card-border);border-radius:var(--radius);padding:1.5rem 2rem;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap">
+      <span style="font-size:0.875rem;color:var(--sub);font-weight:500">Accepted payments:</span>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap">
+        <div class="payment-badge">
+          <span>💵</span> Cash
+        </div>
+        <div class="payment-badge">
+          <span>💚</span> CashApp
+        </div>
+        <div class="payment-badge" style="opacity:0.5">
+          <span>➕</span> More coming soon
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -1465,21 +1578,13 @@
       <h2 class="section-title">Recent <span class="gradient-text">Projects</span></h2>
       <p class="section-sub">A few of the businesses I've helped grow their online presence and conversions.</p>
     </div>
-    <div class="projects-grid">
+    <div class="projects-grid" style="grid-template-columns:repeat(2,1fr)">
       <div class="project-card reveal reveal-delay-1">
-        <div class="project-mockup" style="background:linear-gradient(135deg,#0B0F14,#111827)">
-          <div class="proj-bar" style="background:#3B82F6;width:60%;height:8px"></div>
-          <div class="proj-bar" style="background:rgba(255,255,255,0.1);width:90%"></div>
-          <div class="proj-bar" style="background:rgba(255,255,255,0.06);width:75%"></div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px">
-            <div style="height:50px;background:rgba(59,130,246,0.15);border-radius:6px;border:1px solid rgba(59,130,246,0.2)"></div>
-            <div style="height:50px;background:rgba(59,130,246,0.08);border-radius:6px;border:1px solid rgba(255,255,255,0.06)"></div>
-          </div>
-        </div>
+        <img src="website1.jpg" alt="OLabs App" style="width:100%;height:100%;object-fit:cover;object-position:top">
         <div class="project-overlay">
-          <h3>NovaTech Solutions</h3>
-          <p>SaaS landing page · 240% conversion lift</p>
-          <button class="proj-view-btn">View Case Study</button>
+          <h3>OLabs</h3>
+          <p>Frontend website</p>
+          <a href="https://olabs.app" target="_blank" class="proj-view-btn">Visit Site</a>
         </div>
       </div>
       <div class="project-card reveal reveal-delay-2">
@@ -1489,71 +1594,15 @@
           <div style="display:flex;gap:5px;margin-top:8px">
             <div style="flex:1;height:55px;background:rgba(16,185,129,0.12);border-radius:6px;border:1px solid rgba(16,185,129,0.2)"></div>
             <div style="flex:1;height:55px;background:rgba(16,185,129,0.06);border-radius:6px;border:1px solid rgba(255,255,255,0.06)"></div>
-            <div style="flex:1;height:55px;background:rgba(16,185,129,0.09);border-radius:6px;border:1px solid rgba(255,255,255,0.06)"></div>
           </div>
         </div>
         <div class="project-overlay">
-          <h3>Bloom Wellness Studio</h3>
-          <p>Booking system + branding · 3× bookings</p>
-          <button class="proj-view-btn">View Case Study</button>
-        </div>
-      </div>
-      <div class="project-card reveal reveal-delay-3">
-        <div class="project-mockup" style="background:linear-gradient(135deg,#13111a,#1a1228)">
-          <div class="proj-bar" style="background:#8B5CF6;width:55%;height:8px"></div>
-          <div class="proj-bar" style="background:rgba(255,255,255,0.1);width:90%"></div>
-          <div style="margin-top:8px;height:70px;background:rgba(139,92,246,0.12);border-radius:6px;border:1px solid rgba(139,92,246,0.2)"></div>
-        </div>
-        <div class="project-overlay">
-          <h3>Aurelio Creative Agency</h3>
-          <p>Portfolio + CMS · 5× lead generation</p>
-          <button class="proj-view-btn">View Case Study</button>
-        </div>
-      </div>
-      <div class="project-card reveal reveal-delay-1">
-        <div class="project-mockup" style="background:linear-gradient(135deg,#111827,#1a1505)">
-          <div class="proj-bar" style="background:#F59E0B;width:50%;height:8px"></div>
-          <div class="proj-bar" style="background:rgba(255,255,255,0.1);width:80%"></div>
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:8px">
-            <div style="height:40px;background:rgba(245,158,11,0.1);border-radius:5px;border:1px solid rgba(245,158,11,0.2)"></div>
-            <div style="height:40px;background:rgba(245,158,11,0.06);border-radius:5px"></div>
-            <div style="height:40px;background:rgba(245,158,11,0.08);border-radius:5px"></div>
-          </div>
-        </div>
-        <div class="project-overlay">
-          <h3>GoldenBite Restaurant</h3>
-          <p>Restaurant site + menu · 180% online orders</p>
-          <button class="proj-view-btn">View Case Study</button>
-        </div>
-      </div>
-      <div class="project-card reveal reveal-delay-2">
-        <div class="project-mockup" style="background:linear-gradient(135deg,#0a1628,#0f2040)">
-          <div class="proj-bar" style="background:#38BDF8;width:65%;height:8px"></div>
-          <div class="proj-bar" style="background:rgba(255,255,255,0.1);width:75%"></div>
-          <div style="margin-top:8px;display:flex;gap:5px">
-            <div style="width:35%;height:60px;background:rgba(56,189,248,0.12);border-radius:5px;border:1px solid rgba(56,189,248,0.2)"></div>
-            <div style="flex:1;height:60px;background:rgba(56,189,248,0.06);border-radius:5px"></div>
-          </div>
-        </div>
-        <div class="project-overlay">
-          <h3>OceanView Properties</h3>
-          <p>Real estate portal · Full lead funnel</p>
-          <button class="proj-view-btn">View Case Study</button>
-        </div>
-      </div>
-      <div class="project-card reveal reveal-delay-3">
-        <div class="project-mockup" style="background:linear-gradient(135deg,#120808,#1f0f0f)">
-          <div class="proj-bar" style="background:#EF4444;width:40%;height:8px"></div>
-          <div class="proj-bar" style="background:rgba(255,255,255,0.1);width:85%"></div>
-          <div style="margin-top:8px;height:70px;background:rgba(239,68,68,0.1);border-radius:6px;border:1px solid rgba(239,68,68,0.2);display:flex;align-items:center;justify-content:center;color:rgba(239,68,68,0.5);font-size:1.8rem">♦</div>
-        </div>
-        <div class="project-overlay">
-          <h3>IgniteCoach Platform</h3>
-          <p>Coaching site + course sales funnel</p>
-          <button class="proj-view-btn">View Case Study</button>
+          <h3>Project 2</h3>
+          <p>Coming soon</p>
         </div>
       </div>
     </div>
+    <p class="reveal" style="margin-top:1.5rem;color:var(--sub);font-size:0.875rem;text-align:center">More projects coming soon — reach out to see examples of my work directly.</p>
   </div>
 </section>
 
@@ -1563,11 +1612,11 @@
     <div class="contact-grid">
       <div class="contact-info reveal">
         <div class="section-tag">Let's Talk</div>
-        <h2 class="section-title">Ready to Build Something <span class="gradient-text">Incredible?</span></h2>
-        <p>Tell me about your project and I'll get back to you within 24 hours. If I reached out to you first, your site may already be built — ready to review on the spot.</p>
+        <h2 class="section-title">Want a Website?<br><span class="gradient-text">Let's Make It Happen.</span></h2>
+        <p>Send me a message and I'll get back to you within 24 hours. If I already reached out to you, your site might already be ready to look at.</p>
         <div class="contact-detail">
           <div class="contact-detail-icon">✉️</div>
-          <span>hello@kalivon.dev</span>
+          <span>kalivonsupport@gmail.com</span>
         </div>
         <div class="contact-detail">
           <div class="contact-detail-icon">💬</div>
@@ -1582,40 +1631,41 @@
         </div>
       </div>
       <div class="contact-form reveal reveal-delay-2">
+        <form action="https://formspree.io/f/maqazeor" method="POST">
         <div class="form-row">
           <div class="form-group">
             <label>First Name</label>
-            <input type="text" placeholder="Alex">
+            <input type="text" name="first_name" placeholder="Alex" required>
           </div>
           <div class="form-group">
             <label>Last Name</label>
-            <input type="text" placeholder="Johnson">
+            <input type="text" name="last_name" placeholder="Johnson">
           </div>
         </div>
         <div class="form-group">
           <label>Email Address</label>
-          <input type="email" placeholder="alex@company.com">
+          <input type="email" name="email" placeholder="alex@company.com" required>
         </div>
         <div class="form-group">
           <label>Business Name</label>
-          <input type="text" placeholder="Your Company">
+          <input type="text" name="business_name" placeholder="Your Company">
         </div>
         <div class="form-group">
-          <label>Service Needed</label>
-          <select>
-            <option value="">Select a service</option>
-            <option>Business Website</option>
-            <option>Landing Page</option>
-            <option>Booking System</option>
-            <option>Performance Optimization</option>
-            <option>Full Package</option>
+          <label>Which plan are you interested in?</label>
+          <select name="plan">
+            <option value="">Select a plan...</option>
+            <option>Basic — $50</option>
+            <option>Standard — $100</option>
+            <option>Premium — $150</option>
+            <option>Not sure yet</option>
           </select>
         </div>
         <div class="form-group">
           <label>Tell me about your project</label>
-          <textarea placeholder="What do you need? What's your goal? Any deadline?"></textarea>
+          <textarea name="message" placeholder="What do you need? What's your goal? Any deadline?"></textarea>
         </div>
-        <button class="btn-primary form-submit" onclick="handleSubmit(this)">Send Message →</button>
+        <button type="submit" class="btn-primary form-submit">Send Message →</button>
+        </form>
       </div>
     </div>
   </div>
@@ -1640,9 +1690,8 @@
         <ul>
           <li><a href="#">Business Websites</a></li>
           <li><a href="#">Landing Pages</a></li>
-          <li><a href="#">Booking Systems</a></li>
-          <li><a href="#">Performance Audit</a></li>
-          <li><a href="#">SEO Optimization</a></li>
+          <li><a href="#">Portfolio Sites</a></li>
+          <li><a href="#">Mobile-First Design</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -1699,7 +1748,7 @@ class Particle {
     this.vx = (Math.random() - 0.5) * 0.5;
     this.vy = (Math.random() - 0.5) * 0.5;
     this.size = Math.random() * 1.5 + 0.5;
-    this.opacity = Math.random() * 0.4 + 0.1;
+    this.opacity = Math.random() * 0.5 + 0.25;
   }
   update() {
     this.x += this.vx;
@@ -1730,12 +1779,12 @@ function connect() {
       const dy = particles[i].y - particles[j].y;
       const dist = Math.sqrt(dx * dx + dy * dy);
       if (dist < maxDist) {
-        const alpha = (1 - dist / maxDist) * 0.2;
+        const alpha = (1 - dist / maxDist) * 0.45;
         ctx.beginPath();
         ctx.moveTo(particles[i].x, particles[i].y);
         ctx.lineTo(particles[j].x, particles[j].y);
         ctx.strokeStyle = `rgba(59,130,246,${alpha})`;
-        ctx.lineWidth = 0.5;
+        ctx.lineWidth = 1;
         ctx.stroke();
       }
     }
@@ -1743,12 +1792,12 @@ function connect() {
     const mdy = particles[i].y - mouse.y;
     const mdist = Math.sqrt(mdx * mdx + mdy * mdy);
     if (mdist < mouseMaxDist) {
-      const alpha = (1 - mdist / mouseMaxDist) * 0.5;
+      const alpha = (1 - mdist / mouseMaxDist) * 0.75;
       ctx.beginPath();
       ctx.moveTo(particles[i].x, particles[i].y);
       ctx.lineTo(mouse.x, mouse.y);
       ctx.strokeStyle = `rgba(59,130,246,${alpha})`;
-      ctx.lineWidth = 0.8;
+      ctx.lineWidth = 1.5;
       ctx.stroke();
     }
   }
@@ -1764,16 +1813,23 @@ animate();
 
 // THEME TOGGLE
 const themeToggle = document.getElementById('themeToggle');
+const themeToggleMobile = document.getElementById('themeToggleMobile');
 let isDark = true;
-themeToggle.addEventListener('click', () => {
-  isDark = !isDark;
+
+function setTheme(dark) {
+  isDark = dark;
   document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
-  themeToggle.textContent = isDark ? '🌙' : '☀️';
-});
+  const icon = isDark ? '🌙' : '☀️';
+  themeToggle.textContent = icon;
+  if (themeToggleMobile) themeToggleMobile.textContent = icon;
+}
+
+themeToggle.addEventListener('click', () => setTheme(!isDark));
+if (themeToggleMobile) themeToggleMobile.addEventListener('click', () => setTheme(!isDark));
 
 // HAMBURGER
 document.getElementById('hamburger').addEventListener('click', () => {
-  document.getElementById('mobileMenu').classList.add('open');
+  document.getElementById('mobileMenu').classList.toggle('open');
 });
 document.getElementById('mobileClose').addEventListener('click', closeMobile);
 function closeMobile() {
@@ -1802,12 +1858,14 @@ document.querySelectorAll('.tilt-card').forEach(card => {
     const y = e.clientY - rect.top;
     const cx = rect.width / 2;
     const cy = rect.height / 2;
-    const rotX = (y - cy) / cy * -6;
-    const rotY = (x - cx) / cx * 6;
-    card.style.transform = `perspective(800px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateY(-6px)`;
+    const rotX = (y - cy) / cy * -7;
+    const rotY = (x - cx) / cx * 7;
+    card.style.transition = 'transform 0.15s ease, box-shadow 0.3s, background 0.3s';
+    card.style.transform = `perspective(700px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateZ(8px)`;
   });
   card.addEventListener('mouseleave', () => {
-    card.style.transform = '';
+    card.style.transition = 'transform 0.5s ease, box-shadow 0.3s, background 0.3s';
+    card.style.transform = 'perspective(700px) rotateX(0deg) rotateY(0deg) translateZ(0px)';
   });
 });
 
